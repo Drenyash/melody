@@ -1,0 +1,94 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  display: block;
+  width: 100%;
+  max-width: 1600px;
+  padding: 0 80px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #635854;
+  border-bottom: 4px solid #3596F5;
+}
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: inline-block;
+}
+.logo svg {
+  vertical-align: middle;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav__link {
+  display: block;
+  margin-right: 80px;
+  padding: 9px 16px;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: #FFFFFF;
+  transition: color 0.2s linear;
+}
+.nav__link:last-child {
+  margin-right: 0;
+}
+.nav__link:hover, .nav__link:focus {
+  color: #3596F5;
+}
+.nav__link--active {
+  background-color: #3596F5;
+}
+.nav__link--active:hover, .nav__link--active:focus {
+  color: #FFFFFF;
+}
+
+.phone {
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+  text-align: right;
+}
+.phone:hover span, .phone:focus span {
+  text-decoration: underline;
+}
+.phone span {
+  margin-top: 4px;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=style.css.map */
