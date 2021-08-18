@@ -1,0 +1,76 @@
+.main__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.main__controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.main__home-icon {
+
+  path {
+    transition: opacity .1s linear;
+    opacity: 0;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.main__counter {
+  margin: 35px 0;
+  font-family: "Bebas-Neue", sans-serif;
+  font-size: 128px;
+  line-height: 128px;
+  color: #635854;
+}
+
+.main-controls-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 116px;
+}
+
+.main__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.main__btn--second {
+  svg {
+    transform: rotate(180deg);
+  }
+}
+
+.main__title {
+  margin-bottom: 116px;
+  font-family: "Bebas-Neue", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 37px;
+  line-height: 44px;
+  color: #635854;
+}
+
+.main__show-btn {
+  display: inline-block;
+  padding: 16px 36px;
+  font-size: 16px;
+  line-height: 18px;
+  color: $color-light;
+  background-color: $color-primary;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}

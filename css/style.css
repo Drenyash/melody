@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Bebas-Neue";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: local("Bebas-Neue"), local("Bebas-Neue"), url("../fonts/BebasNeueRegular.woff2") format("woff2"), url("../fonts/BebasNeueRegular.woff") format("woff");
+}
 html, body {
   margin: 0;
   padding: 0;
@@ -32,6 +39,7 @@ a {
 }
 
 .header {
+  margin-bottom: 55px;
   background-color: #635854;
   border-bottom: 4px solid #3596F5;
 }
@@ -89,6 +97,77 @@ a {
   font-size: 17px;
   line-height: 20px;
   font-weight: 700;
+}
+
+.main__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.main__controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.main__home-icon path {
+  transition: opacity 0.1s linear;
+  opacity: 0;
+  cursor: pointer;
+}
+.main__home-icon path:hover {
+  opacity: 1;
+}
+
+.main__counter {
+  margin: 35px 0;
+  font-family: "Bebas-Neue", sans-serif;
+  font-size: 128px;
+  line-height: 128px;
+  color: #635854;
+}
+
+.main-controls-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 116px;
+}
+
+.main__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.main__btn--second svg {
+  transform: rotate(180deg);
+}
+
+.main__title {
+  margin-bottom: 116px;
+  font-family: "Bebas-Neue", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 37px;
+  line-height: 44px;
+  color: #635854;
+}
+
+.main__show-btn {
+  display: inline-block;
+  padding: 16px 36px;
+  font-size: 16px;
+  line-height: 18px;
+  color: #FFFFFF;
+  background-color: #3596F5;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
