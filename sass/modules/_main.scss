@@ -77,4 +77,10 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
+
+  transition: background-color .2s linear;
+
+  &:hover, &:focus {
+    background-color: darken($color-primary, 10%);
+  }
 }

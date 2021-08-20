@@ -2,6 +2,10 @@ const floors = document.querySelectorAll('path[data-floor]');
 const floorCounter = document.querySelector('.main__counter')
 const buttons = document.querySelectorAll('.main__btn')
 
+const showFloors = document.querySelector('.main__show-btn')
+const modal = document.querySelector('.modal');
+const modalClose = document.querySelector('.modal__close');
+
 let currentFloor = floorCounter.textContent;
 let usCurrentFloor;
 
@@ -13,6 +17,7 @@ const showCurrentFloor = () => {
             })
             floor.classList.add('active-floor')
         }
+        floor.addEventListener('click', openModal)
     })
 }
 
@@ -44,4 +49,53 @@ buttons.forEach((button) => {
             }
         })
     }
+})
+
+function openModal() {
+    modal.classList.toggle('modal--active');
+    const modalFloor = document.querySelector('.modal__counter');
+    modalFloor.textContent = floorCounter.textContent;
+}
+
+showFloors.addEventListener('click', openModal);
+
+modalClose.addEventListener('click', openModal);
+
+// Выбор этажа в модалке
+
+const modalFlat = document.querySelectorAll('.modal__icon path');
+const modalLinks = document.querySelectorAll('.modal__link');
+
+modalFlat.forEach((flat) => {
+    flat.addEventListener('mouseover', () => {
+        modalFlat.forEach((flat) => {
+            flat.classList.remove('active-flat');
+        })
+        flat.classList.add('active-flat');
+        modalLinks.forEach((link) => {
+            if (flat.getAttribute('data-number') == link.getAttribute('data-number')) {
+                modalLinks.forEach((link) => {
+                    link.classList.remove('active--link')
+                })
+                link.classList.add('active--link')
+            }
+        })
+    })
+})
+
+modalLinks.forEach((link) => {
+    link.addEventListener('mouseover', () => {
+        modalLinks.forEach((link) => {
+            link.classList.remove('active--link');
+        })
+        link.classList.add('active--link')
+        modalFlat.forEach((flat) => {
+            if (flat.getAttribute('data-number') == link.getAttribute('data-number')) {
+                modalFlat.forEach((flat) => {
+                    flat.classList.remove('active-flat')
+                })
+                flat.classList.add('active-flat')
+            }
+        })
+    })
 })

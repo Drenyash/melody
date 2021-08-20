@@ -53,7 +53,7 @@
                             <image id="image0" width="740" height="640" xlink:href="img/home.jpg"/>
                         </defs>
                         <rect width="734" height="640" fill="url(#pattern0)"/>
-                        <path data-floor="02" d="M225 532L445.8 540L515 526.3V548L446.5 567.7L225 556.7V532Z" fill="#3595F6" fill-opacity="0.75"/>
+                        <path class="active-floor" data-floor="02" d="M225 532L445.8 540L515 526.3V548L446.5 567.7L225 556.7V532Z" fill="#3595F6" fill-opacity="0.75"/>
                         <path data-floor="03" d="M226 531V506L446.3 509.3L516 506V526L446.7 539L226 531Z" fill="#3595F6" fill-opacity="0.75"/>
                         <path data-floor="04" d="M226 505V480H447H516V503L448 510L226 505Z" fill="#3595F6" fill-opacity="0.75"/>
                         <path data-floor="05" d="M226 481V456L447.3 452.3L515 459V481H447" fill="#3595F6" fill-opacity="0.75"/>
@@ -92,6 +92,153 @@
             </div>
         </div>
     </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__col">
+                    <a class="footer-logo" href="#">
+                        <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect width="65" height="65" fill="url(#pattern2)"/>
+                            <defs>
+                                <pattern id="pattern2" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                    <use xlink:href="#image2" transform="scale(0.005)"/>
+                                </pattern>
+                                <image id="image2" width="200" height="200" xlink:href="data:image/png;base64,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"/>
+                            </defs>
+                        </svg>
+                    </a>
+                    <a class="phone footer__phone" href="tel:88431234567">
+                        закажите звонок:<br>
+                        <span>8 (843) 123-45-67</span>
+                    </a>
+                    <ul class="social">
+                        <li class="social__item">
+                            <a href="#" class="social__link">
+                                <svg class="social__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.25 6.875V4.375C11.25 3.685 11.81 3.125 12.5 3.125H13.75V0H11.25C9.17875 0 7.5 1.67875 7.5 3.75V6.875H5V10H7.5V20H11.25V10H13.75L15 6.875H11.25Z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social__link">
+                                <svg class="social__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.75 0H6.25C2.79875 0 0 2.79875 0 6.25V13.75C0 17.2013 2.79875 20 6.25 20H13.75C17.2013 20 20 17.2013 20 13.75V6.25C20 2.79875 17.2013 0 13.75 0ZM18.125 13.75C18.125 16.1625 16.1625 18.125 13.75 18.125H6.25C3.8375 18.125 1.875 16.1625 1.875 13.75V6.25C1.875 3.8375 3.8375 1.875 6.25 1.875H13.75C16.1625 1.875 18.125 3.8375 18.125 6.25V13.75Z"/>
+                                    <path d="M10 5C7.23875 5 5 7.23875 5 10C5 12.7613 7.23875 15 10 15C12.7613 15 15 12.7613 15 10C15 7.23875 12.7613 5 10 5ZM10 13.125C8.2775 13.125 6.875 11.7225 6.875 10C6.875 8.27625 8.2775 6.875 10 6.875C11.7225 6.875 13.125 8.27625 13.125 10C13.125 11.7225 11.7225 13.125 10 13.125Z"/>
+                                    <path d="M15.375 5.29124C15.7429 5.29124 16.0412 4.99295 16.0412 4.62499C16.0412 4.25703 15.7429 3.95874 15.375 3.95874C15.007 3.95874 14.7087 4.25703 14.7087 4.62499C14.7087 4.99295 15.007 5.29124 15.375 5.29124Z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social__link">
+                                <svg class="social__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0)">
+                                        <path d="M20 3.79875C19.2563 4.125 18.4637 4.34125 17.6375 4.44625C18.4875 3.93875 19.1363 3.14125 19.4412 2.18C18.6488 2.6525 17.7738 2.98625 16.8412 3.1725C16.0887 2.37125 15.0162 1.875 13.8462 1.875C11.5763 1.875 9.74875 3.7175 9.74875 5.97625C9.74875 6.30125 9.77625 6.61375 9.84375 6.91125C6.435 6.745 3.41875 5.11125 1.3925 2.6225C1.03875 3.23625 0.83125 3.93875 0.83125 4.695C0.83125 6.115 1.5625 7.37375 2.6525 8.1025C1.99375 8.09 1.3475 7.89875 0.8 7.5975C0.8 7.61 0.8 7.62625 0.8 7.6425C0.8 9.635 2.22125 11.29 4.085 11.6712C3.75125 11.7625 3.3875 11.8062 3.01 11.8062C2.7475 11.8062 2.4825 11.7913 2.23375 11.7362C2.765 13.36 4.2725 14.5538 6.065 14.5925C4.67 15.6838 2.89875 16.3412 0.98125 16.3412C0.645 16.3412 0.3225 16.3263 0 16.285C1.81625 17.4563 3.96875 18.125 6.29 18.125C13.835 18.125 17.96 11.875 17.96 6.4575C17.96 6.27625 17.9538 6.10125 17.945 5.9275C18.7588 5.35 19.4425 4.62875 20 3.79875Z"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0">
+                                            <rect width="20" height="20" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social__link">
+                                <svg class="social__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.15 4.45C18.6075 3.485 18.0188 3.3075 16.82 3.24C15.6225 3.15875 12.6112 3.125 10.0025 3.125C7.38875 3.125 4.37625 3.15875 3.18 3.23875C1.98375 3.3075 1.39375 3.48375 0.84625 4.45C0.2875 5.41375 0 7.07375 0 9.99625C0 9.99875 0 10 0 10C0 10.0025 0 10.0038 0 10.0038V10.0063C0 12.9163 0.2875 14.5887 0.84625 15.5425C1.39375 16.5075 1.9825 16.6825 3.17875 16.7638C4.37625 16.8338 7.38875 16.875 10.0025 16.875C12.6112 16.875 15.6225 16.8337 16.8212 16.765C18.02 16.6837 18.6087 16.5088 19.1513 15.5438C19.715 14.59 20 12.9175 20 10.0075C20 10.0075 20 10.0038 20 10.0013C20 10.0013 20 9.99875 20 9.9975C20 7.07375 19.715 5.41375 19.15 4.45ZM7.5 13.75V6.25L13.75 10L7.5 13.75Z"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <ul class="footer-nav">
+                        <li class="footer-nav__item">
+                            <a href="#" class="footer-nav__link">Политика конфиденциальности</a>
+                        </li>
+                        <li class="footer-nav__item">
+                            <a href="#" class="footer-nav__link">Публичная оферта</a>
+                        </li>
+                        <li class="footer-nav__item">
+                            <a href="#" class="footer-nav__link">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal">
+        <div class="modal__wrapper">
+            <div class="modal__image">
+                <h3 class="modal__floor-title">Этаж <span class="modal__counter">02</span></h3>
+                <svg class="modal__icon" width="433" height="408" viewBox="0 0 433 408" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <defs>
+                        <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image1" transform="scale(0.00230947 0.00245098)"/>
+                        </pattern>
+                        <image id="image1" width="433" height="408" xlink:href="img/Floor.png"/>
+                    </defs>
+                    <rect width="433" height="408" fill="url(#pattern1)"/>
+                    <path data-number="49" d="M388 81V141H314V148H267.5V131H247V32.5H338.5V16H405V81H388Z" fill="#3595F6" fill-opacity="0.75"/>
+                    <path data-number="48" d="M314 148.5H268V200H367.5V205H387.5V141H314V148.5Z" fill="#3595F6" fill-opacity="0.75"/>
+                    <path data-number="47" d="M314.192 252.662H268V200H367.916V204.602H388V268H314.192V252.662Z" fill="#3595F6" fill-opacity="0.75"/>
+                    <path data-number="46" d="M314 253H268.5V309H295.5V376H340V393H405V328.5H388V268.5H314V253Z" fill="#3595F6" fill-opacity="0.75"/>
+                    <path data-number="45" d="M218 394.5V264H247.5V273.5H267.5V310.5H294.5V375H259.5V394.5H218Z" fill="#3595F6" fill-opacity="0.75"/>
+                    <path data-number="44" d="M217 394.5V264H187.5V273.5H167.5V310.5H140.5V375H175.5V394.5H217Z" fill="#3595F6" fill-opacity="0.75"/>
+                    <path data-number="43" d="M121 252H166.5V309H139.5V376H95V393H30V328.5H47V273.5H121V252Z" fill="#3595F6" fill-opacity="0.75"/>
+                    <path data-number="42" d="M119.5 273.5H46V198H167V250.822H119.5V273.5Z" fill="#3595F6" fill-opacity="0.75"/>
+                    <path data-number="41" d="M124.729 116H46V198H167V145.178H124.729V116Z" fill="#3595F6" fill-opacity="0.75"/>
+                    <path data-number="40" d="M46.5 81V115.5H125V144.5H164V131H184.5V32.5H93V16H28V81H46.5Z" fill="#3595F6" fill-opacity="0.75"/>
+                </svg>
+            </div>
+            <div class="modal__info">
+                <h3 class="modal__floor-title">Выберите квартиру</h3>
+
+                <ul class="modal__list">
+                    <li class="modal__item">
+                        <a data-number="40" class="modal__link" href="#">кв. 40, 3 комн. 64,5 кв. м.<sup>2</sup></a>
+                    </li>
+                    <li class="modal__item">
+                        <a data-number="41" class="modal__link" href="#">кв. 41, 1 комн. 38,9 кв. м.<sup>2</sup></a>
+                    </li>
+                    <li class="modal__item">
+                        <a data-number="42" class="modal__link" href="#">кв. 42, 1 комн. 35,9 кв. м.<sup>2</sup></a>
+                    </li>
+                    <li class="modal__item">
+                        <a data-number="43" class="modal__link" href="#">кв. 43, 2 комн. 56,0 кв. м.<sup>2</sup></a>
+                    </li>
+                    <li class="modal__item">
+                        <a data-number="44" class="modal__link" href="#">кв. 44, 1 комн. 35,8 кв. м.<sup>2</sup></a>
+                    </li>
+                    <li class="modal__item">
+                        <a data-number="45" class="modal__link" href="#">кв. 44, 1 комн. 35,8 кв. м.<sup>2</sup></a>
+                    </li>
+                    <li class="modal__item">
+                        <a data-number="46" class="modal__link" href="#">кв. 46, 2 комн. 58,4 кв. м.<sup>2</sup></a>
+                    </li>
+                    <li class="modal__item">
+                        <a data-number="47" class="modal__link" href="#">кв. 47, 1 комн. 32,3 кв. м.<sup>2</sup></a>
+                    </li>
+                    <li class="modal__item">
+                        <a data-number="48" class="modal__link" href="#">кв. 48, 1 комн. 29,9 кв. м.<sup>2</sup></a>
+                    </li>
+                    <li class="modal__item">
+                        <a data-number="49" class="modal__link" href="#">кв. 49, 3 комн. 75,2 кв. м.<sup>2</sup></a>
+                    </li>
+                </ul>
+                <p class="modal__redeem">Квартиры, отмеченные серым,<br> уже выкуплены</p>
+                <div class="modal__close">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 2L26 26" stroke="#3596F5" stroke-width="3"/>
+                        <path d="M26 2L2 26" stroke="#3596F5" stroke-width="3"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.modal -->
 
     <script src="js/script.js"></script>
 </body>
