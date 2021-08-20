@@ -303,6 +303,7 @@ a {
 .footer {
   padding: 50px 0;
   background-color: #D7D7D7;
+  border-top: 4px solid #3596F5;
 }
 
 .footer-logo {
