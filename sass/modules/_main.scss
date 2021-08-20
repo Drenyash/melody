@@ -21,6 +21,9 @@
       opacity: 1;
     }
   }
+  .active-floor {
+    opacity: 1;
+  }
 }
 
 .main__counter {
@@ -36,6 +39,7 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 116px;
+  min-width: 150px;
 }
 
 .main__btn {
@@ -47,7 +51,7 @@
   cursor: pointer;
 }
 
-.main__btn--second {
+.main__btn--down {
   svg {
     transform: rotate(180deg);
   }

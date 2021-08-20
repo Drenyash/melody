@@ -119,6 +119,9 @@ a {
 .main__home-icon path:hover {
   opacity: 1;
 }
+.main__home-icon .active-floor {
+  opacity: 1;
+}
 
 .main__counter {
   margin: 35px 0;
@@ -133,6 +136,7 @@ a {
   flex-direction: column;
   align-items: center;
   margin-bottom: 116px;
+  min-width: 150px;
 }
 
 .main__btn {
@@ -144,7 +148,7 @@ a {
   cursor: pointer;
 }
 
-.main__btn--second svg {
+.main__btn--down svg {
   transform: rotate(180deg);
 }
 
